@@ -1,10 +1,10 @@
 # MinGW libraries for the Spring RTS game engine - 64 bit
 
+##WARNING - 64 bit windows builds of spring are experimental at best and will not sync with other builds.
+
 ## README
 
 The files in this package are needed to compile spring with MinGW.
-WARNING - 64 bit windows builds of spring are experimental at best
-and will not sync with other builds.
 
 
 ### Notes for users
