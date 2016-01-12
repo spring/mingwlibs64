@@ -1,6 +1,6 @@
 # MinGW libraries for the Spring RTS game engine - 64 bit
 
-##WARNING - 64 bit windows builds of spring are experimental at best and will not sync with other builds.
+##WARNING - 64 bit windows builds of spring are experimental and may not sync with other builds.
 
 ## README
 
