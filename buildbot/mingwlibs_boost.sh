@@ -3,9 +3,9 @@
 set -e
 
 # Setting system dependent vars
-BOOST_DIR=/tmp/boost/
-BOOST_BUILD_DIR=/tmp/build-boost/
-MINGWLIBS_DIR=/tmp/mingwlibs/
+BOOST_DIR=/tmp/boost64/
+BOOST_BUILD_DIR=/tmp/build-boost64/
+MINGWLIBS_DIR=/tmp/mingwlibs64/
 BOOST_MAJOR=1
 BOOST_MINOR=55
 BOOST_PATCH=0
@@ -25,7 +25,7 @@ set +e
 set -e
 
 # x86 or x86_64
-MINGW_GPP=/usr/bin/i686-w64-mingw32-g++
+MINGW_GPP=x86_64-w64-mingw32.static-g++
 GCC_VERSION=$(${MINGW_GPP} -dumpversion)
 
 BOOST_LIBS_ARG=""
@@ -145,7 +145,7 @@ echo "-- git push"
 cd ${MINGWLIBS_DIR}
 BOOST_VERSION=$(grep "#define BOOST_VERSION " ./include/boost/version.hpp | awk '{print $3}')
 BOOST_VERSTR="$((BOOST_VERSION / 100000)).$((BOOST_VERSION / 100 % 1000)).$((BOOST_VERSION % 100))"
-git remote add cloud git@github.com:spring/mingwlibs.git
+git remote add cloud git@github.com:spring/mingwlibs64.git
 git add --all
 git commit -m "boost update (boost: ${BOOST_VERSTR} gcc: ${GCC_VERSION})"
 git push cloud
